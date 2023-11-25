@@ -45,7 +45,7 @@ int main()
             optimus = optimusPrime; // Now, optimusPrime won't be deleted when it goes out of scope
                                     // because optimus is still pointing to it
         }
-        optimus->Print(); // The optimusPrime variable was deleted, but the object still exists
+        optimus->Print(); // Since the object is still alive, we can still call methods on it
     }
 
     // A weak pointer is a smart pointer that doesn't increase the reference count
@@ -66,9 +66,8 @@ int main()
     // In practice, we would use shared pointers like this:
     std::weak_ptr<int> weakArray; // We want to check if the array is deleted without keeping it alive
     {
-        std::shared_ptr<int> sharedArray = CreateArray(); // This is how we would use the function above
-                                                          // The array won't be deleted now because of the shared pointer
-        std::cout << sharedArray.get()[1] << std::endl;   // We can access the array like normal
+        std::shared_ptr<int> sharedArray = CreateArray();
+        std::cout << sharedArray.get()[1] << std::endl; // We can access the array like normal
 
         weakArray = sharedArray; // Now, the array will be deleted when sharedArray goes out of scope
     }
