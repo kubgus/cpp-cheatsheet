@@ -8,6 +8,8 @@ struct Vector2
         // the explicit keyword prevents implicit conversions
     }
     Vector2() : x(0), y(0) {}
+    // note: constructors in this struct are not necessary,
+    // but they are here to demonstrate the explicit keyword
 };
 
 int main()

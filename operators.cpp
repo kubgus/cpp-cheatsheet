@@ -3,16 +3,15 @@
 struct Vector2
 {
     int x, y;
-    Vector2(int x, int y) : x(x), y(y) {}
 
     Vector2 operator+(const Vector2 &other) const
     {
-        return Vector2(x + other.x, y + other.y);
+        return Vector2{x + other.x, y + other.y};
     }
 
     Vector2 operator*(const Vector2 &other) const
     {
-        return Vector2(x * other.x, y * other.y);
+        return Vector2{x * other.x, y * other.y};
     }
 
     bool operator==(const Vector2 &other) const
@@ -50,9 +49,9 @@ std::ostream &operator<<(std::ostream &stream, const Vector2 &other)
 
 int main()
 {
-    Vector2 position(4, 4);
-    Vector2 speed(2, 2);
-    Vector2 powerup(1, 1);
+    Vector2 position = {1, 2};
+    Vector2 speed = {2, 3};
+    Vector2 powerup = {4, 5};
 
     Vector2 result1 = position + speed * powerup;
     Vector2 result2 = (position + speed) * powerup;
@@ -66,7 +65,7 @@ int main()
     std::cout << result2 << std::endl;
 
     // operator overloading is very useful for smart pointers (see smart-pointers.cpp)
-    ScopedPtr vector = new Vector2(2, 3);
+    ScopedPtr vector = new Vector2{1, 2};
     std::cout << vector->x << std::endl;
     // without operator overloading, this would be something like "vector.GetObject()->x"
 }
