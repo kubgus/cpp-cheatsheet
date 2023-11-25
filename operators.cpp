@@ -23,7 +23,7 @@ struct Vector2
     bool operator!=(const Vector2 &other) const
     {
         return !(*this == other);
-        // Note: "this" is a pointer to the current object
+        // note: "this" is a pointer to the current object
     }
 
     // ...

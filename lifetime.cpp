@@ -7,8 +7,8 @@ struct Robot
     ~Robot() { std::cout << "Shutting down " << name << "!" << std::endl; }
 };
 
-// Curly braces create a new scope
-// When the scope ends, the object is destroyed
+// curly braces create a new scope
+// when the scope ends, the object is destroyed
 int main()
 {
     Robot r2d2("R2-D2");
@@ -20,24 +20,24 @@ int main()
     Robot bumblebee("Bumblebee");
 }
 
-// This is important because of a common mistake in C++. Consider this snippet:
+// this is important because of a common mistake in C++. Consider this snippet:
 int *CreateArray1() // Causes warning
 {
     int array[50];
     return array;
 }
-// This function returns a pointer to an array of 50 integers
-// However, the array is destroyed when the function ends
-// This means that the pointer is now pointing to garbage memory
-// This is called a dangling pointer
+// this function returns a pointer to an array of 50 integers
+// however, the array is destroyed when the function ends
+// this means that the pointer is now pointing to garbage memory
+// this is called a dangling pointer
 
-// To fix this, we can use the "new" keyword:
+// to fix this, we can use the "new" keyword:
 int *CreateArray2()
 {
     int *array = new int[50];
     return array;
 }
-// This works, but now we have to manually delete the array
-// This is a common source of memory leaks
+// this works, but now we have to manually delete the array
+// this is a common source of memory leaks
 
-// This is where smart pointers come in handy (see smart-pointers.cpp)
+// this is where smart pointers come in handy (see smart-pointers.cpp)
