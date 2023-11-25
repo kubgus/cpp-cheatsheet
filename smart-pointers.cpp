@@ -14,6 +14,14 @@ struct Robot
     void Print() { std::cout << "I am " << name << "!" << std::endl; }
 };
 
+std::shared_ptr<int> InPractice() // Read the main function to see how this is used
+{
+    std::shared_ptr<int> array = std::make_shared<int>(50);
+    array.get()[1] = 2;
+    return array; // The array won't be deleted now because of the shared pointer
+                  // This expands on the issues mentioned in lifetime.cpp
+}
+
 int main()
 {
     // A unique pointer is a smart pointer that automatically deletes the object when it goes out of scope
@@ -40,7 +48,7 @@ int main()
     }
 
     // A weak pointer is a smart pointer that doesn't increase the reference count
-    // We use it when we want to reference an object without keeping it alive
+    // Usually used for checking if an object is still alive without actually keeping it alive
     {
         std::weak_ptr<Robot> bumblebee;
         {
@@ -48,11 +56,20 @@ int main()
             bumblebee = bumblebeePrime;
         } // bumblebeePrime is deleted, meaning bumblebee is now expired
 
-        /*bumblebee->Print();*/ // This now won't work
-
         if (bumblebee.expired()) // We can check if the object is expired
             std::cout << "Bumblebee is expired!" << std::endl;
         else
             std::cout << "Bumblebee is not expired!" << std::endl;
     }
+
+    // In practice, we would use shared pointers like this:
+    std::weak_ptr<int> weakArray; // We want to check if the array is deleted without keeping it alive
+    {
+        std::shared_ptr<int> sharedArray = InPractice(); // This is how we would use the function above
+                                                         // The array won't be deleted now because of the shared pointer
+        std::cout << sharedArray.get()[1] << std::endl;  // We can access the array like normal
+
+        weakArray = sharedArray; // Now, the array will be deleted when sharedArray goes out of scope
+    }
+    std::cout << (weakArray.expired() ? "Shared array is expired!" : "I'm confused...") << std::endl;
 }
