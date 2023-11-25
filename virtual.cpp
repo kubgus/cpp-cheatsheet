@@ -17,7 +17,7 @@ public:
     }
 
 private:
-    int m_Name;
+    const char *m_Name = "Player";
 };
 
 class Interface
@@ -37,4 +37,19 @@ public:
     }
 };
 
-int main() {}
+int main()
+{
+
+    Entity e;
+    e.Print();
+
+    Player p;
+    p.Print();
+
+    /*Interface i; // can't instantiate abstract class
+    i.Print();*/
+    // can't call pure virtual function
+
+    Implement impl; // can instantiate derived class
+    impl.Print();   // can call overridden function
+}
