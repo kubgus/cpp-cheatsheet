@@ -29,6 +29,7 @@ struct Vector2
     // ...
 };
 
+// operator overload
 std::ostream &operator<<(std::ostream &stream, const Vector2 &other)
 {
     stream << other.x << ", " << other.y;
