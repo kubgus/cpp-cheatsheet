@@ -36,3 +36,5 @@ public:
         std::cout << "Hello, World!" << std::endl;
     }
 };
+
+int main() {}
