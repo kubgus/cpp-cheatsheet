@@ -21,13 +21,23 @@ int main()
 }
 
 // This is important because of a common mistake in C++. Consider this snippet:
-// int *CreateArray()
-// {
-//     int array[50];
-//     return array;
-// }
+int *CreateArray1() // Causes warning
+{
+    int array[50];
+    return array;
+}
 // This function returns a pointer to an array of 50 integers
 // However, the array is destroyed when the function ends
 // This means that the pointer is now pointing to garbage memory
 // This is called a dangling pointer
-// See arrays.cpp and smart-pointers.cpp for more information
+
+// To fix this, we can use the "new" keyword:
+int *CreateArray2()
+{
+    int *array = new int[50];
+    return array;
+}
+// This works, but now we have to manually delete the array
+// This is a common source of memory leaks
+
+// This is where smart pointers come in handy (see smart-pointers.cpp)

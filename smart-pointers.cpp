@@ -14,12 +14,13 @@ struct Robot
     void Print() { std::cout << "I am " << name << "!" << std::endl; }
 };
 
-std::shared_ptr<int> InPractice() // Read the main function to see how this is used
+// This is an example function expanding on the one in lifetime.cpp
+std::shared_ptr<int> CreateArray() // Read the main function to see how this is used
 {
     std::shared_ptr<int> array = std::make_shared<int>(50);
     array.get()[1] = 2;
     return array; // The array won't be deleted now because of the shared pointer
-                  // This expands on the issues mentioned in lifetime.cpp
+                  // but it will also be deleted when the last shared pointer to it goes out of scope
 }
 
 int main()
@@ -65,11 +66,11 @@ int main()
     // In practice, we would use shared pointers like this:
     std::weak_ptr<int> weakArray; // We want to check if the array is deleted without keeping it alive
     {
-        std::shared_ptr<int> sharedArray = InPractice(); // This is how we would use the function above
-                                                         // The array won't be deleted now because of the shared pointer
-        std::cout << sharedArray.get()[1] << std::endl;  // We can access the array like normal
+        std::shared_ptr<int> sharedArray = CreateArray(); // This is how we would use the function above
+                                                          // The array won't be deleted now because of the shared pointer
+        std::cout << sharedArray.get()[1] << std::endl;   // We can access the array like normal
 
         weakArray = sharedArray; // Now, the array will be deleted when sharedArray goes out of scope
     }
-    std::cout << (weakArray.expired() ? "Shared array is expired!" : "I'm confused...") << std::endl;
+    std::cout << (weakArray.expired() ? "Shared array is expired!" : "Shared array isn't expired!") << std::endl;
 }
