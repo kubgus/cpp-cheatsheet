@@ -39,4 +39,7 @@ int main()
     const int *const d = &value; // constant pointer to a constant integer
                                  // the pointer can't be changed to point to another integer
                                  // the value can't be changed through this pointer
+    const int &e = value;        // reference to a constant integer
+                                 // the value can't be changed through this reference
+    int const &f = value;        // same as const int &e
 }
