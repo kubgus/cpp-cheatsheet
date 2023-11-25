@@ -7,16 +7,16 @@ static void Function()
 }
 
 static int s_Variable = 5; // only accessible in this file
-                           // linker won't look for it outside this file
+                           // the linker won't look for it outside this file
 extern int variable;       // this is the default behavior
                            // linker will look for it outside this file
 
-struct Struct // the static keyword can also be used with structs and classes
+struct Struct // The static keyword can also be used with structs and classes
 {
-    static int s_Variable; // only one instance of this variable
-                           // shared by all instances of this class
-                           // can be accessed with Struct::s_Variable
-    static void Function()
+    inline static int s_Member; // only one instance of this variable
+                                // shared by all instances of this class
+                                // can be accessed with Struct::s_Member
+    static void Method()
     {
         // doesn't use the class instance
     }
@@ -24,6 +24,7 @@ struct Struct // the static keyword can also be used with structs and classes
 
 int main()
 {
-    Struct::s_Variable = 2;
-    Struct::Function();
+    // note: "Struct::s_Member" would have to be defined before this if it wasn't declared inline (C++17)
+    Struct::s_Member = 2;
+    Struct::Method();
 }
