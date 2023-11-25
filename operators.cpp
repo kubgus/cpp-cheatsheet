@@ -29,6 +29,18 @@ struct Vector2
     // ...
 };
 
+class ScopedPtr
+{
+public:
+    ScopedPtr(Vector2 *ptr) : m_Ptr(ptr) {}
+    ~ScopedPtr() { delete m_Ptr; }
+    Vector2 *operator->() { return m_Ptr; }             // makes code cleaner
+    const Vector2 *operator->() const { return m_Ptr; } // const version
+
+private:
+    Vector2 *m_Ptr;
+};
+
 // operator overload
 std::ostream &operator<<(std::ostream &stream, const Vector2 &other)
 {
@@ -52,4 +64,9 @@ int main()
 
     std::cout << result1 << std::endl;
     std::cout << result2 << std::endl;
+
+    // operator overloading is very useful for smart pointers (see smart-pointers.cpp)
+    ScopedPtr vector = new Vector2(2, 3);
+    std::cout << vector->x << std::endl;
+    // without operator overloading, this would be something like "vector.GetObject()->x"
 }
