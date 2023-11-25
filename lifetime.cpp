@@ -26,7 +26,8 @@ int main()
 //     int array[50];
 //     return array;
 // }
-// This function returns a pointer to an array of 50 integers.
-// However, the array is destroyed when the function ends.
-// This means that the pointer is now pointing to garbage memory.
-// This is called a dangling pointer.
+// This function returns a pointer to an array of 50 integers
+// However, the array is destroyed when the function ends
+// This means that the pointer is now pointing to garbage memory
+// This is called a dangling pointer
+// See arrays.cpp and smart-pointers.cpp for more information
