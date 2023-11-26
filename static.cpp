@@ -37,8 +37,10 @@ public:
 
 static int s_Variable = 5; // only accessible in this file
                            // the linker won't look for it outside this file
-extern int variable;       // this is the default behavior
-                           // linker will look for it outside this file
+extern int variable;       // tells the linker to look for this variable outside this file
+                           // this is the default behavior
+                           // this is the same as not writing "static"
+                           // this is useful for global variables
 
 struct Struct // The static keyword can also be used with structs and classes
 {

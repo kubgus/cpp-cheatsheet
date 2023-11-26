@@ -79,14 +79,13 @@ https://www.tutorialspoint.com/cplusplus/cpp_operators.htm
 | Specifier | In this repo | C++ Reference | Description |
 | :-------: | :-----: | :-----------------: | ----------- |
 | `const` | [`const.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/const.cpp) | [Link](https://en.cppreference.com/w/cpp/language/cv) | Makes a variable immutable |
-| `static` | [`static.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/static.cpp) | [Link](https://en.cppreference.com/w/cpp/language/storage_duration) | Makes a variable last for the duration of the program |
-| `extern` | [`static.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/static.cpp) | [Link](https://en.cppreference.com/w/cpp/language/storage_duration) | Also makes a variable last for the duration of the program, but can be accessed from anywhere |
+| `static` | [`static.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/static.cpp) | [Link](https://en.cppreference.com/w/cpp/keyword/static) | Makes a variable or function static |
+| `extern` | [`static.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/static.cpp) | [Link](https://en.cppreference.com/w/cpp/keyword/extern) | Declares a variable that is defined in another translation unit or that is defined externally |
 | `inline` | NULL | [Link](https://en.cppreference.com/w/cpp/language/inline) | Instructs the compiler to insert a copy of the code of a function at the point where the function is called at compile time |
 | `virtual` | [`virtual.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/virtual.cpp) | [Link](https://en.cppreference.com/w/cpp/language/virtual) | Declares a function that can be overridden in a derived class |
 | `override` | [`virtual.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/virtual.cpp) | [Link](https://en.cppreference.com/w/cpp/language/override) | Specifies that a virtual function overrides another virtual function |
 | `final` | NULL | [Link](https://en.cppreference.com/w/cpp/language/final) | Specifies that a virtual function cannot be overridden in a derived class or that a class cannot be inherited from |
-| `implicit` | [`implicit.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/implicit.cpp) | [Link](https://en.cppreference.com/w/cpp/language/implicit_conversion) | Allows a type to be converted to another type implicitly |
-| `explicit` | [`implicit.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/implicit.cpp) | [Link](https://en.cppreference.com/w/cpp/language/explicit) | Prevents a type to be converted to another type implicitly |
+| `explicit` | [`explicit.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/explicit.cpp) | [Link](https://en.cppreference.com/w/cpp/language/explicit) | Prevents a type to be converted to another type implicitly |
 | `friend` | NULL | [Link](https://en.cppreference.com/w/cpp/language/friend) | Grants a function or another class access to private and protected members of a class |
 
 ## Stack vs Heap 📚
