@@ -76,7 +76,7 @@ https://www.tutorialspoint.com/cplusplus/cpp_operators.htm
 | `protected` | Members cannot be accessed from outside the class, however, they can be accessed in inherited classes |
 
 ## Other Specifiers 📌
-| Specifier | In this repo | On cppreference.com | Description |
+| Specifier | In this repo | C++ Reference | Description |
 | :-------: | :-----: | :-----------------: | ----------- |
 | `const` | [`const.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/const.cpp) | [Link](https://en.cppreference.com/w/cpp/language/cv) | Makes a variable immutable |
 | `static` | [`static.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/static.cpp) | [Link](https://en.cppreference.com/w/cpp/language/storage_duration) | Makes a variable last for the duration of the program |
