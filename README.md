@@ -68,6 +68,27 @@ https://www.tutorialspoint.com/cplusplus/cpp_operators.htm
 | `||` | Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true |
 | `!` | Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then Logical NOT operator will make it false |
 
+## Access Specifiers 🔒
+| Specifier | Description |
+| :-------: | ----------- |
+| `public` | Members are accessible from outside the class |
+| `private` | Members cannot be accessed (or viewed) from outside the class |
+| `protected` | Members cannot be accessed from outside the class, however, they can be accessed in inherited classes |
+
+## Other Specifiers 📌
+| Specifier | In this repo | On cppreference.com | Description |
+| :-------: | :-----: | :-----------------: | ----------- |
+| `const` | [`const.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/const.cpp) | [Link](https://en.cppreference.com/w/cpp/language/cv) | Makes a variable immutable |
+| `static` | [`static.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/static.cpp) | [Link](https://en.cppreference.com/w/cpp/language/storage_duration) | Makes a variable last for the duration of the program |
+| `extern` | [`static.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/static.cpp) | [Link](https://en.cppreference.com/w/cpp/language/storage_duration) | Also makes a variable last for the duration of the program, but can be accessed from anywhere |
+| `inline` | NULL | [Link](https://en.cppreference.com/w/cpp/language/inline) | Instructs the compiler to insert a copy of the code of a function at the point where the function is called at compile time |
+| `virtual` | [`virtual.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/virtual.cpp) | [Link](https://en.cppreference.com/w/cpp/language/virtual) | Declares a function that can be overridden in a derived class |
+| `override` | [`virtual.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/virtual.cpp) | [Link](https://en.cppreference.com/w/cpp/language/override) | Specifies that a virtual function overrides another virtual function |
+| `final` | NULL | [Link](https://en.cppreference.com/w/cpp/language/final) | Specifies that a virtual function cannot be overridden in a derived class or that a class cannot be inherited from |
+| `implicit` | [`implicit.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/implicit.cpp) | [Link](https://en.cppreference.com/w/cpp/language/implicit_conversion) | Allows a type to be converted to another type implicitly |
+| `explicit` | [`implicit.cpp`](https://github.com/kubgus/cpp-cheatsheet/blob/main/implicit.cpp) | [Link](https://en.cppreference.com/w/cpp/language/explicit) | Prevents a type to be converted to another type implicitly |
+| `friend` | NULL | [Link](https://en.cppreference.com/w/cpp/language/friend) | Grants a function or another class access to private and protected members of a class |
+
 ## Stack vs Heap 📚
 https://www.youtube.com/watch?v=wJ1L2nSIV1s&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=54
 |                      | Stack                              | Heap                                |
