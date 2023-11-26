@@ -1,6 +1,9 @@
 # C++ Cheatsheet 📜
 A collection of C++ snippets that explain how the language works.
 
+### More fun stuff ⚡
+- [C++ Playground 🎮](https://github.com/kubgus/cpp-playground)
+
 ### Made possible by @TheCherno 🚀
 Cherno makes programming tutorials focused on C++. The concepts explained in this repo reference his explanations from different videos.
 - [Website](https://thecherno.com/)
