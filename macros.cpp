@@ -23,10 +23,21 @@
 // g++ -D DEBUG=1 macros.cpp -o macros
 // this will define DEBUG as 1 before compiling
 
+#define OPENGL
+
 int main()
 {
     LOG("Hello World!"); // this is the same as std::cout << "Hello World!" << std::endl;
     LOG(STR_HELLO);      // this is the same as std::cout << "Hello!" << std::endl;
 
     EFFICIENT_LOG("Debug message...");
+
+    // macros can be anywhere in the code
+#ifdef OPENGL
+    LOG("Do OpenGL stuff...");
+#elif VULKAN
+    LOG("Do Vulkan stuff...");
+#else
+    LOG("Sorry, no graphics API for you :(");
+#endif
 }
