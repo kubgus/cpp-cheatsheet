@@ -7,6 +7,9 @@ Cherno makes programming tutorials focused on C++. The concepts explained in thi
 - [YouTube Channel](https://www.youtube.com/@TheCherno)
 - [C++ Playlist](https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)
 
+#### <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png?20220706172052" alt="YouTube logo" height="12"> First video
+<a href="https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb"><img src="https://i3.ytimg.com/vi/18c3MTX0PK0/maxresdefault.jpg" alt="YouTube Video Thumbnail" width="200"></a>
+
 ### Contribution 🤝
 Feel free to contribute your code or point out any issues. We're all human, mistakes in this code are inevitable, but unlikely.
 
