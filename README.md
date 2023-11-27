@@ -34,6 +34,9 @@ https://www.tutorialspoint.com/cplusplus/cpp_data_types.htm
 | `float`              | 4 bytes  | Floating point numbers                        |
 | `double`             | 8 bytes  | Floating point numbers                        |
 | `long double`        | 12 bytes | Floating point numbers                        |
+| `auto`              | -        | -                                             |
+
+> `auto` is a placeholder for a data type that is automatically deduced by the compiler. [Cherno's video](https://www.youtube.com/watch?v=2vOPEuiGXVo&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb&index=56)
 
 ## Operators 🧮
 https://www.tutorialspoint.com/cplusplus/cpp_operators.htm
