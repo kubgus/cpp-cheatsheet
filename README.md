@@ -68,7 +68,7 @@ https://www.tutorialspoint.com/cplusplus/cpp_operators.htm
 | `>=` | Checks if the value of left operand is greater than or equal to the value of right operand. If yes, then the condition becomes true |
 | `<=` | Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true |
 | `&&` | Called Logical AND operator. If both the operands are non-zero, then the condition becomes true |
-| `||` | Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true |
+| `\|\|` | Called Logical OR Operator. If any of the two operands is non-zero, then the condition becomes true |
 | `!` | Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then Logical NOT operator will make it false |
 
 ## Access Specifiers 🔒
@@ -103,5 +103,5 @@ https://www.youtube.com/watch?v=wJ1L2nSIV1s&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4
 | Access               | `a = 2;`                           | `*a = 2;`                           |
 | Deletion             | Automatically when out of scope    | `delete a;`                         |
 | Size                 | Smaller                            | Larger                              |
-| Stored               | Togetger in memory                 | Fragmented                          |
+| Stored               | Together in memory                 | Fragmented                          |
 | Allocating           | Costs around 1 CPU instruction     | Costs a lot more                    |
