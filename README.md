@@ -105,3 +105,12 @@ https://www.youtube.com/watch?v=wJ1L2nSIV1s&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4
 | Size                 | Smaller                            | Larger                              |
 | Stored               | Together in memory                 | Fragmented                          |
 | Allocating           | Costs around 1 CPU instruction     | Costs a lot more                    |
+
+## Casting 🎭
+https://www.tutorialspoint.com/cplusplus/cpp_casting_operators.htm
+| Operator | Description |
+| :------: | ----------- |
+| `static_cast` | Checks if the type of the expression is compatible with the target type and converts it if possible. |
+| `reinterpret_cast` | Converts any pointer type to any other pointer type. The operation result is a simple binary copy of the value from one pointer to the other. (type punning) |
+| `const_cast` | Modifies the const, volatile, and __unaligned attributes of the type. (usually used to remove `const`) |
+| `dynamic_cast` | Returns a null pointer of the target type if the conversion is not possible. |
